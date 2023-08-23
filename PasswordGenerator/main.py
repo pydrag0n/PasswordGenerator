@@ -1,4 +1,4 @@
-import random
+from random import choices
 import json
 
 
@@ -19,7 +19,7 @@ class PassGen:
         
         for _ in range(numbers_pieces):
             
-            yield ''.join(random.choices(characters, k=length))
+            yield ''.join(choices(characters, k=length))
 
 password_generator = PassGen()
 passwords = password_generator.generate()
