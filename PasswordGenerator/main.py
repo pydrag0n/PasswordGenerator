@@ -2,8 +2,7 @@ from random import choices
 import json
 
 
-with open('settings.json') as setting:
-    settings_data = json.load(fp=setting)
+
     
 """settings.json is required to configure password generation"""
 
@@ -16,6 +15,8 @@ class PassGen:
                  numbers_pieces=settings_data['numbers_pieces']: int,
                  length=settings_data['password_length']: int,
                  characters=settings_data['characters']: str) -> str:
+        with open('settings.json') as setting:
+            settings_data = json.load(fp=setting)
         
         for _ in range(numbers_pieces):
             
