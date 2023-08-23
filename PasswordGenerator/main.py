@@ -13,9 +13,9 @@ with open('settings.json') as setting:
 
 class PassGen:
     def generate(self,
-                 numbers_pieces=settings_data['numbers_pieces'],
-                 length=settings_data['password_length'],
-                 characters=settings_data['characters'] ):
+                 numbers_pieces=settings_data['numbers_pieces']: int,
+                 length=settings_data['password_length']: int,
+                 characters=settings_data['characters']: str) -> str:
         
         for _ in range(numbers_pieces):
             
